@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>彼得·林奇的成功投资</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="彼得·林奇的成功投资 - One Up on Wall Street">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@latest/lib/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
+    <style>
+        :root {
+            --theme-color: #2c7a4a;
+            --sidebar-width: 18rem;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #c4c4c4;
+        }
+        body.dark-mode .sidebar {
+            background-color: #141414;
+            border-right: 1px solid #333;
+            color: #c4c4c4;
+        }
+        body.dark-mode .sidebar-nav li a { color: #999; }
+        body.dark-mode .sidebar-nav li.active > a {
+            color: #42b983;
+            border-right: 2px solid #42b983;
+        }
+        body.dark-mode .markdown-section { color: #c4c4c4; }
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 { color: #e0e0e0; }
+        body.dark-mode blockquote { color: #999; background: rgba(255,255,255,0.05); }
+        body.dark-mode code {
+            background-color: #2b2b2b;
+            color: #f08d49;
+        }
+        body.dark-mode pre {
+            background-color: #2b2b2b !important;
+        }
+        body.dark-mode .markdown-section tr:nth-child(2n) {
+            background-color: rgba(255,255,255,0.03);
+        }
+        body.dark-mode .markdown-section td,
+        body.dark-mode .markdown-section th {
+            border-color: #333;
+        }
+
+        .sidebar-nav li > a {
+            font-size: 15px;
+            white-space: normal;
+            word-break: break-all;
+        }
+        .markdown-section {
+            max-width: 50em;
+            margin: 0 auto;
+            padding: 0 2em;
+        }
+        .markdown-section p {
+            text-indent: 2em;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        .markdown-section h1 { font-size: 1.8em; margin-top: 2em; }
+        .markdown-section h2 { font-size: 1.4em; margin-top: 2em; }
+
+        .app-nav { position: absolute; right: 0; top: 10px; }
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: 1px solid #999;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 14px;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .markdown-section { padding: 0 1em; }
+            .markdown-section p { text-indent: 1em; font-size: 15px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/docsify.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+    <script>
+        window.$docsify = {
+            name: '彼得·林奇的成功投资',
+            nameLink: '#/',
+            repo: 'https://github.com/sciengineer/one-up-on-wall-street',
+            loadSidebar: '_sidebar.md',
+            subMaxLevel: 2,
+            auto2top: true,
+            search: {
+                placeholder: '搜索书中内容...',
+                noData: '未找到匹配内容',
+                depth: 3
+            },
+            pagination: {
+                previousText: '上一章',
+                nextText: '下一章',
+                crossChapter: true,
+                crossChapterText: true,
+            },
+            sidebarDisplayLevel: 1,
+            mergeNavbar: true,
+            formatUpdated: '{YYYY}-{MM}-{DD}',
+            darkThemeToggle: true,
+            themeable: {
+                readyTransition: true,
+                responsive: true
+            }
+        };
+    </script>
+
+    <script>
+        (function() {
+            var btn = document.createElement('button');
+            btn.className = 'theme-toggle';
+            btn.textContent = '🌓';
+            btn.title = '切换暗色/亮色模式';
+            btn.onclick = function() {
+                document.body.classList.toggle('dark-mode');
+            };
+            var nav = document.createElement('div');
+            nav.className = 'app-nav';
+            nav.appendChild(btn);
+            document.body.appendChild(nav);
+        })();
+    </script>
+</body>
+
+</html>
